@@ -1,0 +1,205 @@
+.product-page {
+	max-width:1200px;
+	background:#fff;
+	margin:0 auto;
+
+	.container {
+		max-width:1050px;
+		margin:0 auto;
+
+		.product {
+			font-size:0;
+			padding:50px 0;
+
+			@include mq (0,1050px) {
+				width:93%;
+				margin:0 auto;
+			}
+
+			figure {
+				width:400px;
+				height:336px;
+				display:inline-block;
+				background-repeat:no-repeat;
+		   		background-size:cover;
+		    	background-position:center;
+		    	margin-left:10px;
+
+		    	@include mq (851px,1050px) {
+		    		margin-left:10px;
+		    		width:380px;
+					height:319px;
+		    	}
+
+		    	@include mq (651px,850px) {
+		    		width:44%;
+		    		height:260px;
+		    		margin:0 10px 0 0;
+		    	}
+
+		    	@include mq (0, 650px) {
+		    		display:block;
+		    		width:250px;
+		    		height:210px;
+		    		margin:0 auto;
+		    	}
+			}
+
+			aside {
+				font-size:10px;
+				display:inline-block;
+				vertical-align:top;
+				float:right;
+				margin-right:60px;
+
+				@include mq (851px,1050px) {
+		    		width:43%;
+		    		margin-right:50px;
+		    	}
+
+				@include mq (651px, 850px) {
+		    		width:45%;
+		    		margin-right:0;
+		    	}
+
+		    	@include mq (401px, 650px) {
+		    		width:80%;
+		    		display:block;
+		    		margin:0 auto;
+		    		float:none;
+		    	}
+
+		    	@include mq (0, 400px) {
+		    		width:96%;
+		    		margin:0 auto 30px auto;
+		    	}
+
+				h1 {
+					font-size:22px;
+					color:$blue;
+					font-weight:600;
+					margin:10px 0;
+
+				}
+
+				h5 {
+					font-size:12px;
+					color:#000;
+					font-weight:600;
+					margin-bottom:17px;
+					letter-spacing:-1px;
+
+				}
+
+				h3 {
+					font-size:19px;
+					font-weight:600;
+					color:$red;
+					letter-spacing:-1px;
+					margin-bottom:10px;
+
+				}
+
+				span {
+					text-transform:uppercase;
+					padding-left:15px;
+					position:relative;
+					display:block;
+					font-weight:600;
+					letter-spacing:-1px;
+					font-size:12px;
+					margin-bottom:10px;
+
+					&:before {
+						content:'';
+						width:12px;
+						height:12px;
+						background:$green;
+						border-radius:100%;
+						position: absolute;
+						top:0;
+						left:0;
+
+					}
+
+				}
+
+				.cart {
+					background:$light-grey;
+					width:100%;
+					border:2px solid $border-grey;
+					font-size:0;
+					margin-bottom:13px;
+
+					@include mq (0, 850px) {
+			    		.label {
+			    			width:40%;
+			    		}
+
+			    		.addbutton {
+			    			width:60%;
+			    		}
+			    	}
+
+					div {
+						display:inline-block;
+						width:50%;
+
+						label {
+							font-size:12px;
+							color:#000;
+							margin:0 12px;
+							display:inline-block;
+							font-weight:600;
+
+						}
+
+						input {
+							display:inline-block;
+							width:25px;
+							border:2px solid $border-grey;
+							text-align:center;
+							padding:3px 0;
+						}
+
+						.addcart {
+							@include shopping-cart-button;
+						}
+
+						.addedcart {
+							text-transform:uppercase;
+							background:#368445;
+							transition:all 2s;
+
+							&:hover {
+								p {
+									transform:none;
+								}
+
+								.fa-shopping-cart {
+									transform:none;
+								}
+							}
+						}
+					}
+				}
+
+				.favorites {
+					@include favorites-button;
+				}
+
+				.addedfavorites {
+					background:$red;
+					color:#fff;
+					border:1px solid #c4221f;
+
+					.fa-heart {
+						color: #fff;
+						font-weight:800;
+						transition:all 1s;
+					}
+				}
+			}
+		}
+	}
+}

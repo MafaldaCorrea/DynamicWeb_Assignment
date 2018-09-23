@@ -1,0 +1,18 @@
+footer {
+	max-width:1200px;
+	margin:0 auto;
+	background:$grey;
+	margin-bottom:30px;
+
+	p {
+		color:$border-grey;
+		max-width:1050px;
+		margin:0 auto;
+		padding: 15px 0 20px 0;
+		font-size:11px;
+
+		@include mq (0, 1100px) {
+			width:93%;
+		}
+	}
+}

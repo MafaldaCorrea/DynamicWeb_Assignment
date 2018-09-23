@@ -1,0 +1,100 @@
+//MQ
+
+@mixin mq($smallerValue,$biggerValue) {
+	@media (min-width: #{$smallerValue}) and (max-width: $biggerValue) {
+		@content;
+ 	}
+}
+
+@mixin shopping-cart-button {
+	font-size:13px;
+	line-height:35px;
+	color:#fff;
+	background:$green;
+	border:1px solid #96D5A0;
+	border-radius:5px;
+	padding:0 16px;
+	font-weight:600;
+	margin:7px 0 7px 20px;
+	position:relative;
+	width:140px;
+
+	p {
+		display:inline-block;
+	}
+
+	.fa-shopping-cart {
+		margin-right:8px;
+	}
+
+	&:hover {
+
+		p {
+			transition:all 1s;
+			transform:translateX(-22px)
+		}
+
+		.fa-shopping-cart {
+			transition:all .6s;
+			transform:translateX(88px);
+			opacity:1;
+		}
+	}
+}
+
+@mixin favorites-button {
+	border:1px solid $text-color;
+	border-radius:5px;
+	background:transparent;
+	letter-spacing:-1px;
+	font-size: 11px;
+	font-weight:600;
+	padding:3px 3px 5px 8px;
+	color:$text-color;
+	width:120px;
+
+	p {
+		display:inline-block;
+	}
+
+	.fa-heart {
+		color:$red;
+		margin-right:6px;
+		font-size:12px;
+
+	}
+
+	&:hover {
+		transition:all 1s;
+		background:$red;
+		color:#fff;
+		border:1px solid #c4221f;
+
+		.fa-heart {
+			color: #fff;
+			font-weight:800;
+			transition:all 1s;
+		}
+	}
+}
+
+@mixin title-tab {
+	background:$red;
+	text-transform:uppercase;
+	color:#fff;
+	padding:12px 60px;
+	display:inline-block;
+	font-size:15px;
+
+}
+
+@mixin title-border {
+	color:$red;
+	text-transform:uppercase;
+	padding-bottom:7px;
+	font-size:18px;
+	border-bottom:$red 2px solid;
+	font-weight:600;
+	margin-bottom:30px;
+
+}

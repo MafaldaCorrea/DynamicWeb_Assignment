@@ -1,0 +1,65 @@
+.related {
+	padding-bottom:60px;
+
+	@include mq (0,1100px) {
+		width:93%;
+		margin:0 auto;
+	}
+
+	@include mq (0,950px) {
+		text-align:center;
+	}
+	
+	h4 {
+		@include title-border;
+
+		@include mq (0,950px) {
+			text-align:left;
+		}
+	}
+
+	figure {
+		width:30%;
+		display:inline-block;
+		margin:0 10px 20px 0;
+		text-align:center;
+		font-size:0;
+
+		@include mq (600px,950px) {
+			width:49%;
+			margin-right:0;
+		}
+
+		@include mq (0,600px) {
+			width:100%;
+		}
+
+		
+
+		&:hover {
+			a {
+				text-decoration:underline;
+				color:#2771a5;
+				transition:all .3s;
+			}
+		}
+
+		&:last-of-type {
+			margin-right:0;
+		}
+
+		a {
+			display:block;
+			font-size:14px;
+			color:$link-blue;
+			font-weight:600;
+
+			img {
+				width:220px;
+				height:auto;
+				margin-bottom:20px;
+			}
+
+		}
+	}
+}

@@ -1,0 +1,100 @@
+nav {
+	max-width:1200px;
+	background:#fff;
+	margin:0 auto;
+	padding-top:15px;
+
+	img {
+		height:95px;
+		widht:auto;
+		margin-left:10px;
+	}
+
+	ul {
+		background:$grey;
+		width:100%;
+		margin-top:10px;
+		border-bottom: $red solid 25px;
+		font-size:0;
+
+		li {
+			display:inline-block;
+			width:100px;
+			text-align:center;
+			font-size:13px;
+			text-transform:uppercase;
+			font-weight:600;
+			padding:12px 0 14px 0;
+
+			a {
+				color:#fff;
+			}
+
+			&:hover {
+				background:$red;
+				transition:all .2s;
+			}
+		}
+
+		.burger {
+			display:none;
+		}
+	}
+
+	@include mq(0,850px) {
+		img {
+			height:60px;
+		}
+
+		ul {
+			margin-top:0;
+			height:65px;
+			overflow:hidden;
+			transition:all .3s;
+
+			li {
+				display:block;
+				text-align:left;
+				padding-left:12px;
+				width:100%;
+				font-size:14px;
+
+				&:first-of-type {
+					border-bottom:$border-grey solid 0.5px;
+				}
+
+				&:nth-of-type(2) {
+					margin-top:7px;
+				}
+			}
+
+			.burger {
+				padding:4px 0 4px 12px;
+				display:block;
+				border-bottom:none;
+
+				&:hover {
+					background:$grey;
+				} 
+				img {
+					height:30px;
+					width:auto;
+					padding:4px;
+
+					&:hover {
+						border:$red solid 1px;
+						border-radius:5px;
+						transition:all .5s;
+					}
+					
+				}
+			}
+
+		}
+
+		.burgermobile {
+			transition:all .5s;
+			height:325px;
+		}
+	}
+}

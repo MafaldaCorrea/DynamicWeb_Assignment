@@ -1,0 +1,46 @@
+.description {
+	margin-bottom:55px;
+
+	@include mq (0,1100px) {
+		width:93%;
+		margin:0 auto 55px auto;
+	}
+	h4 {
+		@include title-tab;
+
+
+	}
+
+	.text-area {
+		background:$light-grey;
+		padding:40px 30px;
+
+		p {
+			font-size:13px;
+			margin-bottom:10px;
+			line-height:16px;
+
+			&:last-of-type {
+				margin-top:20px;
+				margin-bottom:20px;
+			}
+
+		}
+
+		ul {
+			li {
+				font-size:13px;
+				position:relative;
+				line-height:15px;
+
+				&:before {
+					content:'■';
+					color:$blue;
+					padding:0 7px 0 20px;
+					font-size:21px;
+				}
+
+			}
+		}
+	}
+}
